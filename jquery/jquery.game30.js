@@ -49,8 +49,6 @@
                 cliN = cliN + 1
 
 
-
-
                 if (state == 'test') {
 
                     if (cliN == 2) {
@@ -87,7 +85,6 @@
                         return
                     }
 
-
                     _imgSrc(cliN)
 
                     clearInterval(atuo)
@@ -103,7 +100,6 @@
                 $('ul[data-role="process"] >li').removeClass('big')
 
                 $('ul[data-role="process"] >li:eq(' + cliN + ')').addClass('big')
-
 
                 _putIcon();
 
@@ -132,7 +128,6 @@
 
     }
 
-    // 测试完成
     function _complete(num, time) {
 
         $('#screen5').removeClass('show').remove();
@@ -154,7 +149,6 @@
 
     }
 
-    //15秒暂停
     function _suspend(time) {
 
         var t15 = time - 15
@@ -190,7 +184,6 @@
 
     }
 
-    //30秒倒计时
     function _time(i) {
 
         var timeFn = function () {
@@ -215,7 +208,7 @@
 
     }
 
-    // 进度条img
+
     function _imgSrc(n) {
 
         var src = '';
@@ -227,7 +220,6 @@
         }
     }
 
-    //设置界面
     function _textIcon(arr) {
 
         var num = arr[Math.floor(Math.random() * arr.length)];
@@ -237,6 +229,7 @@
 
     }
 
+
     function _putIcon() {
 
         var ArrList = [11, 12, 13, 14, 21, 22, 23, 24, 31, 32, 33, 34, 41, 42, 43, 44];
@@ -245,8 +238,6 @@
         var num = getArrayItems(ArrList, 12);
 
         $('ul[data-role=putIcon]').empty();
-
-        // _time(30)
 
         for (var i = 0; i < num.length; i++) {
 
